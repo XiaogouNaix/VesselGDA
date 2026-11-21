@@ -1,0 +1,144 @@
+dataset: DIAS
+train_refiner: false
+graph_version: 2508
+graph_masked: true
+trainer_configs:
+  save_val_pred: true
+  patch_size:
+  - 1024
+  - 1024
+  fg_oversample: 0.99
+  patches_in_batch: 1
+  max_epoch: 120
+  refine_and_pseudo: false
+  reweight_pseudo: true
+  training_base: tt_sfuda
+  tt_pseudo_fn_use: false
+  test_time_aug_type: flip_with_gray_v2
+  voting_method: pseudo
+  tt_pseudo_thres: 0.15
+  map_contrastive_loss:
+    use: true
+    begin_epoch: 40
+    aug_pred: true
+    aug_pred_type:
+      type: bezier
+      max_rnd_val: 0.85
+      min_rnd_val: 0.75
+    map_from:
+    - map_4
+    - map_3
+    weight: 1.0
+    moco_weight: 0.1
+    use_model_uncert_for_moco: true
+    kl_type: moco
+    num_fg_blocks: 7
+    num_bg_blocks: 7
+    aug_l1_loss:
+      use: true
+      weight: 2.0
+      fg_weight: 3.0
+      uncertain_higher_weight: true
+  cldice:
+    use: false
+    beta1: 0.7
+    beta2: 0.55
+    weight: 0.2
+  frangi_in_pseudo:
+    use: true
+    sigmoid_s: 7.0
+    sigmoid_k: null
+    hard: true
+    add_to_area_interest: true
+  gnn:
+    type: GATInterp
+    scales: 2
+    weight: 0.3
+    graph_smooth_loss: 0.0
+    use_frangi: false
+    ent_weight: 0.3
+    heads: 1
+    residual: true
+    norm: true
+    gnn_memory_bank:
+      use: false
+      max_memory_epoch: 10
+      update_interval: 1
+      start_epoch: 60
+      mod_gt: false
+      agreement_threshold: 0.5
+    map_from: map_3
+    pretrain_epochs: 0
+    lr: 1.0e-05
+    consistency: 2.0
+    consistency_start_epoch: 55
+    consistency_gnn_detach: true
+    consistency_no_sigmoid: true
+    dt_weight:
+      thin_vessel_weight_init: 4.0
+      distance_thres_1: 5.0
+      thick_vessel_weight_init: 0.3
+      thick_vessel_weight_exp: 1.0
+    use_edge_attr: true
+    v2: false
+    delete_edge_weight_under: 0.0
+    loss_uncertainty_mask: true
+    feature_down: true
+    feature_up: true
+    topk: null
+    density_correction: jackson
+    learn_kernel: null
+    pre_node_layers: 2
+    ff_conv_type: GATConv
+    num_layers: 2
+  discriminator:
+    use: false
+  refiner:
+    use: false
+    feature_map_from: map_3
+    lr: 3.0e-05
+    init_dict_path: null
+  cpr_refine:
+    use: false
+    thres: 0.1
+    refine_feature_map: false
+  ema: null
+  ema_conf:
+    begin_epoch: 999999
+  loss_weights:
+    seg: 0.01
+    ent: 1.0
+  # Set a list of zero-based epochs to save; null saves every validation epoch.
+  # Include both epochs whose predictions will be used in the final merge.
+  save_val_epochs: null
+training_configs:
+  lr: 1.0e-06
+  weight_decay: 0.0001
+  patches_in_batch: 1
+  optimizer_type: adam
+source_checkpoint: checkpoints/fives_batch.pth
+net_norm_method: batch
+device: cuda:0
+num_workers: 4
+seed: 42
+image_size:
+- 1024
+- 1024
+data_root: AIF-SFDA-main/datasets/DIAS
+output_dir: results/fundus_to_dias
+highres_graph_sidelen: 16
+lowres_graph_sidelen: 32
+preprocessing:
+  pseudo_mode: tt_sfuda
+  aug_type: flip_with_gray_v2
+  pseudo_threshold: 0.15
+  fov_threshold: 20
+  connect_to_tree_thres: 20
+merge:
+  # Fill with pred/Val_model/epoch_<E> for the selected trunk-reference epoch.
+  early_dir: null
+  # Fill with pred/Val_model/epoch_<E> after topology distillation.
+  late_dir: null
+  output_dir: results/fundus_to_dias/combined
+  min_size: 10000
+run_name: fundus_to_dias

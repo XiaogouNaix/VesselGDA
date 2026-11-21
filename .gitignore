@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.env
+.venv/
+results/
+outputs/
+checkpoints/*
+!checkpoints/.gitkeep
+AIF-SFDA-main/datasets/**/PLPB_mask*/
+AIF-SFDA-main/datasets/**/frangi_*/
+AIF-SFDA-main/datasets/**/graphs_*/
+AIF-SFDA-main/datasets/**/preprocessing_logs/

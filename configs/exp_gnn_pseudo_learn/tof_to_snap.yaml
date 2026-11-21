@@ -1,0 +1,104 @@
+dataset: SNAP0527
+train_refiner: false
+track: true
+graph_version: 2508
+trainer_configs:
+  patch_size_description: small
+  save_val_pred: true
+  patch_size:
+  - 64
+  - 320
+  - 256
+  fg_oversample: 0.99
+  patches_in_batch: 2
+  max_epoch: 30
+  refine_and_pseudo: false
+  reweight_pseudo: true
+  step_each_aug: true
+  step_last_only: true
+  training_base: tt_sfuda
+  tt_pseudo_fn_use: true
+  test_time_aug_type: orig
+  map_contrastive_loss:
+    use: true
+    aug_pred: true
+    start_epoch: 2
+    map_from:
+    - map_4
+    - map_3
+    weight: 0.05
+    kl_type: moco
+    moco_weight: 0.05
+    uncertain_prob: 0.35
+    num_fg_blocks: 7
+    num_bg_blocks: 7
+    aug_l1_loss:
+      use: true
+      weight: 1.0
+      fg_weight: 3.0
+      uncertain_higher_weight: true
+  frangi_in_pseudo:
+    use: true
+    frangi_loss_weight: 0.005
+    sigmoid_s: 0.0
+    sigmoid_k: null
+    hard: true
+  gnn:
+    type: GATInterp
+    zero_grad_before_gnn: false
+    scales: 2
+    weight: 0.03
+    aug_pred_types:
+    - follow
+    aug_pred_weight: 0.5
+    use_frangi: false
+    ent_weight: 0.03
+    residual: true
+    norm: true
+    heads: 1
+    map_from: map_3
+    pretrain_epochs: 0
+    lr: 1.0e-05
+    consistency: 1.0
+    consistency_start_epoch: 20
+    consistency_gnn_detach: true
+    consistency_no_sigmoid: true
+    use_edge_attr: true
+    v2: false
+    delete_edge_weight_under: 0.0
+    loss_uncertainty_mask: true
+    feature_down: true
+    feature_up: true
+    topk: null
+    density_correction: jackson
+    learn_kernel: null
+    pre_node_layers: 2
+    ff_conv_type: GATConv
+  discriminator:
+    use: false
+  refiner:
+    use: false
+    feature_map_from: map_3
+    lr: 3.0e-05
+    init_dict_path: null
+  cpr_refine:
+    use: false
+    thres: 0.1
+    refine_feature_map: false
+  ema: 0.998
+  ema_conf:
+    update_per: 1
+  loss_weights:
+    seg: 0.01
+    ent: 1.0
+training_configs:
+  lr: 1.0e-06
+  weight_decay: 0.0001
+  patches_in_batch: 1
+  optimizer_type: adam
+data_root: data/SNAP
+source_model_dir: checkpoints/tof_nnunet
+source_checkpoint: checkpoints/tof_nnunet/fold_0/checkpoint_best.pth
+device: cuda:0
+run_name: tof_to_snap
+output_dir: results/tof_to_snap

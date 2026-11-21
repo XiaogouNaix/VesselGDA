@@ -1,0 +1,313 @@
+{
+  "format_version": 1,
+  "scope": "VesselGDA standalone code, selected dependencies, configurations, documentation and small data examples",
+  "excludes_manifest_itself": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "role": "support",
+      "bytes": 270,
+      "sha256": "d6d1c661eb637d5926a7979eaaf5e6e4ddf8f3784133902121a79109f2c709f5"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/DIAS/train/demo_dsa_train/image.png",
+      "role": "demo_data",
+      "bytes": 1033723,
+      "sha256": "ac930824274b12ed0ba8d0855aac48febbca3e144b14d392ffbe995aeff38bc5"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/DIAS/train/demo_dsa_train/mask.png",
+      "role": "demo_data",
+      "bytes": 3278,
+      "sha256": "642a6a7527622802bd7b6e3ef3e041e823ea08ac15bd28c792748705ff51f3e6"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/DIAS/val/demo_dsa_test/image.png",
+      "role": "demo_data",
+      "bytes": 1041311,
+      "sha256": "aba6604d329ba99f0f38ee84424da2e4931aca8d6c71997c53cb455337a7271e"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/DIAS/val/demo_dsa_test/label.png",
+      "role": "demo_data",
+      "bytes": 89031,
+      "sha256": "d2d56282f2ad16165e7420f6666242a9254cbd375cda432f67891bc31aca3296"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/DIAS/val/demo_dsa_test/mask.png",
+      "role": "demo_data",
+      "bytes": 3278,
+      "sha256": "642a6a7527622802bd7b6e3ef3e041e823ea08ac15bd28c792748705ff51f3e6"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/DSCA/train/.gitkeep",
+      "role": "support",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/DSCA/val/.gitkeep",
+      "role": "support",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/FIVES/imagesTr/demo_fundus/image.png",
+      "role": "demo_data",
+      "bytes": 2357894,
+      "sha256": "4137c02fbddc618fe72b07d87bc9a61b8a1f7138cec708ce4b91422b529ec061"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/FIVES/imagesTr/demo_fundus/label.png",
+      "role": "demo_data",
+      "bytes": 59743,
+      "sha256": "7c5ffd8510a7eb3897147d74ad8ca3c55c3d367c9e1fe08b7d238408aab80018"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/FIVES/imagesTr/demo_fundus/mask.png",
+      "role": "demo_data",
+      "bytes": 8553,
+      "sha256": "6f531f0a24c78255f3a913019f4bc399276b2964d7f10efa0f9c6812ba784004"
+    },
+    {
+      "path": "AIF-SFDA-main/datasets/FIVES/imagesTs/.gitkeep",
+      "role": "support",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "role": "documentation",
+      "bytes": 3645,
+      "sha256": "b25cab613d4a79f5cce566b17f395991cadf05be1a26715ae4f8e7377be27c3c"
+    },
+    {
+      "path": "USAGE_CN.md",
+      "role": "documentation",
+      "bytes": 898,
+      "sha256": "1c811d75c65187644a85921f05d954f17145ea21e933869e0a901035769ea1de"
+    },
+    {
+      "path": "VALIDATION.md",
+      "role": "documentation",
+      "bytes": 4757,
+      "sha256": "4fda97ba21370e1a3bf24710a93344e29cc5bdb1f73fecb66c4173c98335646a"
+    },
+    {
+      "path": "augmentations.py",
+      "role": "dependency",
+      "bytes": 7524,
+      "sha256": "1652e697d91d8f3f60f88b47e0c57032550871bc2411b977ce967f58a5b26d66"
+    },
+    {
+      "path": "baseline_AIF_SFDA_3d/unet2d.py",
+      "role": "dependency",
+      "bytes": 5748,
+      "sha256": "0eb4e08965bfe72d43de0961d01f8e785466b543c95a4ab34a0eacc2539ca0ce"
+    },
+    {
+      "path": "baseline_dual_normalization/bezier_aug.py",
+      "role": "dependency",
+      "bytes": 2348,
+      "sha256": "6c836259bd737d347693fd2e8ac81b04a057858655768e4e2a1cce29f255658d"
+    },
+    {
+      "path": "baseline_dual_normalization/make_nets.py",
+      "role": "dependency",
+      "bytes": 3125,
+      "sha256": "a4fa09ccce47f710a3a8d95f051b65c134e8ed5ea3ef46e97b76367bdd7b2d25"
+    },
+    {
+      "path": "baseline_plpb.py",
+      "role": "dependency",
+      "bytes": 5410,
+      "sha256": "9784a254dbae1c1653fd04c7e6c00e0e8daac2242a6089b868d00f9b6677ee03"
+    },
+    {
+      "path": "baseline_tt_sfuda.py",
+      "role": "dependency",
+      "bytes": 16332,
+      "sha256": "89b9525ba72c4b6d112fac969bf46f98714470625f9a31850c1a2e12402597a8"
+    },
+    {
+      "path": "checkpoints/.gitkeep",
+      "role": "support",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/exp_gnn_pseudo_learn/tof_to_snap.yaml",
+      "role": "configuration",
+      "bytes": 2147,
+      "sha256": "bb875609a8384f0bb17ec19f31807c33adf356eac47d1cfd9e0758c1d2902099"
+    },
+    {
+      "path": "configs/exp_gnn_pseudo_learn_2d/fundus_to_dias.yaml",
+      "role": "configuration",
+      "bytes": 3229,
+      "sha256": "54e25ac723be1eb0ea1273e5097a915628aafe02c5096bb42bec986fc630c19c"
+    },
+    {
+      "path": "configs/exp_gnn_pseudo_learn_2d/fundus_to_dsca.yaml",
+      "role": "configuration",
+      "bytes": 3250,
+      "sha256": "acf0a80a8a80d92e9cbaa017055950d074b122a290d9e32b585a02f245fc5b81"
+    },
+    {
+      "path": "custom_loss.py",
+      "role": "dependency",
+      "bytes": 17715,
+      "sha256": "2e5e55602297ef2f305aa0c14ae53d8c302323108985e94dc3fd388c5298f83a"
+    },
+    {
+      "path": "dataset.py",
+      "role": "dependency",
+      "bytes": 16172,
+      "sha256": "c201bd91302536c75608305a1117f6571128a7dacf717cc616d572adeaf0deb0"
+    },
+    {
+      "path": "exp_gnn_pseudo_learn.py",
+      "role": "entry_point",
+      "bytes": 99060,
+      "sha256": "c6b30c6bf6f8688c7c6c0c833c50d58a9bda05b6e04ed74dd5aa13eb27039343"
+    },
+    {
+      "path": "exp_gnn_pseudo_learn_2d.py",
+      "role": "entry_point",
+      "bytes": 133167,
+      "sha256": "3a3226929dc3ecc9554f31f04481ee9dde223f6f92b60f6c6ac4f96983a5e56d"
+    },
+    {
+      "path": "exp_gnn_pseudo_learn_2d_tta.py",
+      "role": "entry_point",
+      "bytes": 23469,
+      "sha256": "0e8036dde3b5f6f6d2bf76b667b49b26a2cfcec4aab5a22e2114182ba5e1a1c1"
+    },
+    {
+      "path": "exp_gnn_pseudo_learn_tta.py",
+      "role": "entry_point",
+      "bytes": 21194,
+      "sha256": "a53150a6f710ed232da2c7dde6dac7728c3bf77114b9fed208e05e5fd7529b00"
+    },
+    {
+      "path": "metrics.py",
+      "role": "dependency",
+      "bytes": 8034,
+      "sha256": "2a2d1031ce2fbed3b29666184ccbfeb85bbd5890b688f8bd5ddb381ed43a76a8"
+    },
+    {
+      "path": "nnunet_network_build/resunet.py",
+      "role": "dependency",
+      "bytes": 9372,
+      "sha256": "2dff97ab2b8d3660477e6fe012880dabed0a11cda9218cc7702a41cb1869ef0f"
+    },
+    {
+      "path": "preprocess_build_graph_from_label_2d.py",
+      "role": "dependency",
+      "bytes": 344,
+      "sha256": "c633da498a07297c9fc2a3930bd4e58871dda6da512691004df9c15b44545b81"
+    },
+    {
+      "path": "preprocess_build_graph_from_label_2d_goodfeature.py",
+      "role": "entry_point",
+      "bytes": 19384,
+      "sha256": "cc1936e7f376cda7c7d9f877b9a87729326d962fff58a359ccbb7f41bbeb7968"
+    },
+    {
+      "path": "preprocess_frangi_filter_2d.py",
+      "role": "entry_point",
+      "bytes": 2880,
+      "sha256": "ef34a97da59757c038748520a5fec0b7b9815e1ce503762ea36ab3f39b799ecf"
+    },
+    {
+      "path": "requirements-3d.txt",
+      "role": "environment",
+      "bytes": 95,
+      "sha256": "010498edfa717615fbc4a73d3c2b36fa7b73fe1fef77d0a9ab76f962e508d123"
+    },
+    {
+      "path": "requirements.txt",
+      "role": "environment",
+      "bytes": 442,
+      "sha256": "a217f1f138c069a28dac39aa2ac747e8e0ad01ed40d7bae2ae8f9d67da59b47c"
+    },
+    {
+      "path": "run_fundus_to_dsa.sh",
+      "role": "support",
+      "bytes": 584,
+      "sha256": "8731df3be3ba8db46f7c45ac477d54b782081a1f5596f197aeb1a026c9542b5e"
+    },
+    {
+      "path": "save_uncertainty_volume_2d.py",
+      "role": "entry_point",
+      "bytes": 8469,
+      "sha256": "5962b2424516c8d026318e7aee32db140d7102eb6b6f15748478dec38cfbf4a2"
+    },
+    {
+      "path": "scripts/check_submission.py",
+      "role": "validation",
+      "bytes": 6565,
+      "sha256": "5057f32672e074905b8b0f85a010430018cb92d75d03bbce1810df20ec032c5b"
+    },
+    {
+      "path": "seg_networks/cbdice_skeletonize.py",
+      "role": "dependency",
+      "bytes": 25673,
+      "sha256": "a455d9e516a6a82f8f33378266a05406a2b1daa19ef8d16b4ec83fa7e6d68825"
+    },
+    {
+      "path": "seg_networks/graph_unet.py",
+      "role": "dependency",
+      "bytes": 26178,
+      "sha256": "08e77fa71c06342679a943fa76a5706c6f4dc572cc94f685ff409924241e2d61"
+    },
+    {
+      "path": "seg_networks/whitening.py",
+      "role": "dependency",
+      "bytes": 21451,
+      "sha256": "ae5fd62ad23e8eaf9c7dbc00169fc29d6727aa667d380f6f8f5a37fec15bc94a"
+    },
+    {
+      "path": "submission_config.py",
+      "role": "dependency",
+      "bytes": 3909,
+      "sha256": "f7cd05cd67bf181399159b326bbf23e34461e0b436a2914d2a51412e319e8e9f"
+    },
+    {
+      "path": "test_combine_gnn_results_and_net_result.py",
+      "role": "entry_point",
+      "bytes": 6464,
+      "sha256": "84f33a5edc7626734d7d02043a43bffd488d21defd6a8e3fba43aaef2fb31f41"
+    },
+    {
+      "path": "trainer.py",
+      "role": "dependency",
+      "bytes": 21522,
+      "sha256": "bc104fe6c4c04952702002e4b3972643478768c967d8e1d8b39f138adef96e21"
+    },
+    {
+      "path": "utils.py",
+      "role": "dependency",
+      "bytes": 10623,
+      "sha256": "be73578081f5ba7c11f10705e3e8f776baf717b4845023f9b362f4156fbafb22"
+    },
+    {
+      "path": "utils_preprocess.py",
+      "role": "dependency",
+      "bytes": 7880,
+      "sha256": "608856d21e5042a6b9a086cb6495bca5efd4dd797b8c97503e5d4678491edb18"
+    },
+    {
+      "path": "utils_torch_versions_of_funcs.py",
+      "role": "dependency",
+      "bytes": 11434,
+      "sha256": "09d4f8a7eb78dc3332fef98a01a5e44360fd97c63ada05df86c0cb8e4e018f0b"
+    },
+    {
+      "path": "visualize_graph.py",
+      "role": "dependency",
+      "bytes": 1317,
+      "sha256": "5d008cd4d2ef4b1ed328427a07b17c59fa284cdf006b645904fb02e8c02e488a"
+    }
+  ]
+}
